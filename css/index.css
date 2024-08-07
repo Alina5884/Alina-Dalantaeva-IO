@@ -1,0 +1,55 @@
+body {
+    background-color: rgb(90, 105, 105);
+    color: rgb(205, 205, 205);
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+}
+
+#profile-picture {
+    border: 5px double rgb(27, 58, 102);
+    margin: 15px 50px 20px 100px;
+}
+
+#about,
+#experience,
+#connect {
+    margin: 100px 50px;
+    padding: 0;
+}
+
+#experience ul,
+#connect ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color:rgb(27, 58, 102)
+}
+
+h2 {
+    text-align: center; 
+    font-size: 26px;
+    font-weight: bold;
+    color:rgb(27, 58, 102);
+    border-bottom: 5px double rgb(27, 58, 102);
+}
+a {
+    color: rgb(27, 58, 102);
+}
+/* 
+#navigation {
+    position: fixed;
+    top: 0;
+    background-color: rgb(90, 105, 105);
+} */
+
+#navigation ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
