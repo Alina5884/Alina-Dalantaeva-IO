@@ -1,55 +1,154 @@
 body {
-    background-color: rgb(90, 105, 105);
-    color: rgb(205, 205, 205);
-    font-family: "Poppins", sans-serif;
-    margin: 0;
+    background-color: #657371;
+    color: #EAEEED;
+    font-family: "Poppins", sans-ser;
+    font-size: 1.1em;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#navigation {
+    background-color: #657371;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#navigation ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0.5em auto;
+}
+
+#navigation ul li {
+    background-color: #0B3E5B;
+    padding: 0.6em 2.5em;
+    border: 0.25em double #EAEEED;
+    border-radius: 60%;
+    box-shadow:
+        inset 0.07em 0.07em 0.17em #EAEEED,
+        0.13em 0.13em 0.25em #EAEEED;
+}
+
+#navigation ul li a {
+    color: #EAEEED;
+    font-style: italic;
+    text-decoration: none;
+}
+
+#navigation ul li:hover {
+    background-color: #657371;
+    border: 0.25em double #0B3E5B;
+    box-shadow: 
+        inset 0.07em 0.07em 0.17em #0B3E5B,
+        0.13em 0.13em 0.25em #0B3E5B;
+}
+
+#navigation ul li:hover a {
+    color: #0B3E5B;
+    text-shadow: none;
 }
 
 #profile-picture {
-    border: 5px double rgb(27, 58, 102);
-    margin: 15px 50px 20px 100px;
+    border: 0.4em double #0B3E5B;
+    border-radius: 10%;
+    box-shadow: 0.3em 0.3em 0.5em #EAEEED;
+    margin: 1em auto;
 }
 
 #about,
 #experience,
+#skills,
+#projects,
 #connect {
-    margin: 100px 50px;
+    margin: 7em 12em;
     padding: 0;
 }
-
-#experience ul,
-#connect ul {
-    margin: 0;
-    padding: 0;
-}
-
 
 h1 {
-    text-align: center;
-    font-size: 36px;
-    font-weight: bold;
-    color:rgb(27, 58, 102)
+    padding-top: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    font-size: 3em;
+    color:#0B3E5B;
+    text-shadow: 0.01em 0.01em 0.1em #EAEEED;;
 }
 
 h2 {
-    text-align: center; 
-    font-size: 26px;
-    font-weight: bold;
-    color:rgb(27, 58, 102);
-    border-bottom: 5px double rgb(27, 58, 102);
+    background-color: #0B3E5B;
+    font-size: 2em;
+    margin-top: 1.5em;
+    margin-bottom: 3em;
+    color:#EAEEED;
+    border: 0.25em double #EAEEED;
+    border-radius: 70%;
+    box-shadow: 
+    inset 0.01em 0.01em 0.17em #EAEEED,
+        0.1em 0.1em 0.25em #EAEEED;
+    padding: 0.3em
 }
-a {
-    color: rgb(27, 58, 102);
-}
-/* 
-#navigation {
-    position: fixed;
-    top: 0;
-    background-color: rgb(90, 105, 105);
-} */
 
-#navigation ul {
+p {
+    margin: 1em 2em;
+    padding: 1.5em;
+}
+#experience li {
     display: flex;
-    gap: 30px;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    color: #EAEEED;
+    border-bottom: 0.4em double #0B3E5B;
+    margin: 1em 2em;
+    padding: 1.5em;
+}
+
+.job-details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.title {
+    justify-content: flex-start; 
+    font-style: italic;
+}
+
+.dates {
+    text-align: right;
+}
+
+#connect ul {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2em;
+    margin-top: -3em;
+    padding: 0;
     list-style: none;
+}
+
+a {
+    color: #0B3E5B;
+}
+
+.fa-brands {
+    font-size: 1.5em;
+    box-shadow: 0.07em 0.07em 0.17em #EAEEED;
+}
+
+.fa-github {
+    border-radius: 50%;
+}
+.fa-linkedin {
+    border-radius: 10%;
+}
+.fa-instagram {
+    border-radius: 20%;
+}
+
+footer {
+    margin: 5em 10em ;
 }
