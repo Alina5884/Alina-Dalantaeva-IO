@@ -7,6 +7,10 @@ body {
     margin: 0 auto;
 }
 
+/* =================
+    navigation
+   ================= */
+
 #navigation {
     background-color: #657371;
     position: fixed;
@@ -51,6 +55,10 @@ body {
     text-shadow: none;
 }
 
+/* =================
+    main content
+   ================= */
+
 #profile-picture {
     border: 0.4em double #0B3E5B;
     border-radius: 10%;
@@ -63,7 +71,7 @@ body {
 #skills,
 #projects,
 #connect {
-    margin: 7em 12em;
+    margin: 7em 10em;
     padding: 0;
 }
 
@@ -80,7 +88,7 @@ h2 {
     background-color: #0B3E5B;
     font-size: 2em;
     margin-top: 1.5em;
-    margin-bottom: 3em;
+    margin-bottom: 1.5em;
     color:#EAEEED;
     border: 0.25em double #EAEEED;
     border-radius: 70%;
@@ -95,40 +103,56 @@ p {
     padding: 1.5em;
 }
 #experience li {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
     color: #EAEEED;
     border-bottom: 0.4em double #0B3E5B;
-    margin: 1em 2em;
-    padding: 1.5em;
+    padding: 1em;
 }
 
 .job-details {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-gap: 0.3em;
+
 }
 
-.title {
-    justify-content: flex-start; 
-    font-style: italic;
+.place {
+    grid-column: 1 ;
+    grid-row: 1;
+    justify-self: start;
 }
 
 .dates {
-    text-align: right;
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: start;
+}
+
+.title {
+    grid-column: 2;
+    grid-row: 1 / -1;
+    align-self: center;
+    justify-self: end;
+    font-style: italic;
 }
 
 #connect ul {
     width: auto;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 3em);
     justify-content: center;
-    gap: 2em;
-    margin-top: -3em;
+    padding-top: 1em;
     padding: 0;
     list-style: none;
+
 }
+
+/* =================
+    icons
+   ================= */
 
 a {
     color: #0B3E5B;
@@ -151,4 +175,90 @@ a {
 
 footer {
     margin: 5em 10em ;
+}
+
+/* ==================================
+    media queries for mobile devices
+   ================================== */
+
+   @media (max-width: 768px) {
+
+    body {
+        font-size: 1em;
+    }
+
+    #navigation ul {
+        padding: 0;
+        margin: 1em 0;
+
+    }
+    #navigation ul li {
+        padding: 0.5em 1em;
+        margin-bottom: 0.5em;
+        width: 100%; 
+        text-align: center; 
+    }
+
+    #navigation ul li a {
+        font-size: 1em; 
+    }
+
+    #about,
+    #experience,
+    #skills,
+    #projects,
+    #connect {
+        margin: 2em 1em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        padding: 0.2em;
+    }
+
+    p {
+        margin: 1em;
+        padding: 1em;
+    }
+
+    footer {
+        margin: 2em 1em ;  
+    }
+}
+
+/* ==================================
+    media queries for tablets
+   ================================== */
+
+@media (max-width: 1024px) {
+    body {
+        font-size: 1em;
+    }
+
+    #navigation ul li {
+        padding: 0.5em 1em;
+        margin-bottom: 0.5em;
+        width: 100%;
+        text-align: center;
+    }
+
+    #about,
+    #experience,
+    #skills,
+    #projects,
+    #connect {
+        margin: 5em 3em;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
 }
