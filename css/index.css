@@ -1,114 +1,105 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #DCE0D9;
+    --primary-color: #6B0F1A;
+    --secondary-color: #595959;
+    --accent-color: #808F85;
+}
+
 body {
-    background-color: #657371;
-    color: #EAEEED;
-    font-family: "Poppins", sans-ser;
-    font-size: 1.1em;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
     text-align: center;
-    margin: 0 auto;
-}
-
-/* =================
-    navigation
-   ================= */
-
-#navigation {
-    background-color: #657371;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-#navigation ul {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    padding: 0;
-    margin: 0.5em auto;
-}
-
-#navigation ul li {
-    background-color: #0B3E5B;
-    padding: 0.6em 2.5em;
-    border: 0.25em double #EAEEED;
-    border-radius: 60%;
-    box-shadow:
-        inset 0.07em 0.07em 0.17em #EAEEED,
-        0.13em 0.13em 0.25em #EAEEED;
-}
-
-#navigation ul li a {
-    color: #EAEEED;
-    font-style: italic;
-    text-decoration: none;
-}
-
-#navigation ul li:hover {
-    background-color: #657371;
-    border: 0.25em double #0B3E5B;
-    box-shadow: 
-        inset 0.07em 0.07em 0.17em #0B3E5B,
-        0.13em 0.13em 0.25em #0B3E5B;
-}
-
-#navigation ul li:hover a {
-    color: #0B3E5B;
-    text-shadow: none;
 }
 
 /* =================
     main content
-   ================= */
+==================== */
 
-#profile-picture {
-    border: 0.4em double #0B3E5B;
-    border-radius: 10%;
-    box-shadow: 0.3em 0.3em 0.5em #EAEEED;
-    margin: 1em auto;
+h1 {
+    padding-top: 1.5rem;
+    margin-top: 8rem;
+    margin-bottom: 5rem;
+    font-size: 3.5rem;
+    color: var(--primary-color);
+}
+
+h2 {
+    display: inline-block;
+    font-size: 2rem;
+    margin: 0 auto;
+    padding: 0 1rem 0.5rem;
+    color:var(--primary-color);
+    border-bottom: 0.4rem solid var(--secondary-color);
+}
+
+.feature {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 1rem;
+    margin: 9rem auto;
+    max-width: 90%;
+}
+
+img {
+    grid-row: 1;
+    margin: 0 5rem;
+    border-radius: 1.5%;
+    max-height: 400px;
+    align-self: center;
+    justify-self: center;
 }
 
 #about,
 #experience,
-#skills,
-#projects,
-#connect {
-    margin: 7em 10em;
-    padding: 0;
+#skills {
+    width: 100%;
+    margin: 0 1rem;
+    padding: 2rem 3rem;
+    border: 1rem solid var(--secondary-color);
+    display: inline-block;
+    align-self: center;
+    justify-self: center;
 }
 
-h1 {
-    padding-top: 1.5em;
-    margin-top: 1em;
-    margin-bottom: 1.5em;
-    font-size: 3em;
-    color:#0B3E5B;
-    text-shadow: 0.01em 0.01em 0.1em #EAEEED;;
+#about,
+#skills {
+    grid-column: 2 / -1;
+    border-radius: 30% 5%;
 }
 
-h2 {
-    background-color: #0B3E5B;
-    font-size: 2em;
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-    color:#EAEEED;
-    border: 0.25em double #EAEEED;
-    border-radius: 70%;
-    box-shadow: 
-    inset 0.01em 0.01em 0.17em #EAEEED,
-        0.1em 0.1em 0.25em #EAEEED;
-    padding: 0.3em
+/* About me */
+
+
+#main-image {
+    grid-column: 1 / 2;
+    box-shadow: -0.4rem 0.4rem 0 var(--accent-color);
+    transform: rotate(-5deg);
 }
 
-p {
-    margin: 1em 2em;
-    padding: 1.5em;
+
+/* Experience */
+
+
+#experience {
+    grid-column: 1 / 2;
+    border-radius: 5% 30%;
+    padding-bottom: 3rem;
 }
+
 #experience li {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 1fr;
     grid-template-rows: auto auto;
-    color: #EAEEED;
-    border-bottom: 0.4em double #0B3E5B;
-    padding: 1em;
+    border-bottom: 0.4rem double var(--accent-color);
+    padding: 0.5rem;
 }
 
 .job-details {
@@ -139,28 +130,69 @@ p {
     font-style: italic;
 }
 
+#experience-image {
+    grid-column: 2 / 3;
+    box-shadow: 0.4rem 0.4rem 0 var(--accent-color);
+    transform: rotate(5deg);
+}
+
+
+/* Skills */
+
+#skills-image {
+    grid-column: 1 / 2;
+    box-shadow: -0.4rem 0.4rem 0 var(--accent-color);
+    transform: rotate(-5deg);
+}
+
+#skills ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin: 2rem 0 0;
+    padding: 0;
+    max-width: 100%;
+    justify-content: center;
+}
+
+
+#projects,
+#connect {
+    margin: 7rem 10rem;
+    padding: 0;
+}
+
 #connect ul {
     width: auto;
     display: grid;
-    grid-template-columns: repeat(3, 3em);
+    grid-template-columns: repeat(3, 3rem);
     justify-content: center;
-    padding-top: 1em;
+    padding-top: 1rem;
     padding: 0;
     list-style: none;
 
 }
 
+footer {
+    margin: 5rem 10rem ;
+}
+
 /* =================
     icons
-   ================= */
+==================== */
 
 a {
-    color: #0B3E5B;
+    color: var(--primary-color);
+}
+
+a:hover,
+a:focus {
+    color: var(--secondary-color);
 }
 
 .fa-brands {
-    font-size: 1.5em;
-    box-shadow: 0.07em 0.07em 0.17em #EAEEED;
+    font-size: 1.5rem;
 }
 
 .fa-github {
@@ -173,92 +205,139 @@ a {
     border-radius: 20%;
 }
 
-footer {
-    margin: 5em 10em ;
+/* ==============
+    navigation
+================= */
+
+   #navigation {
+    background-color: var(--bg-color);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-/* ==================================
-    media queries for mobile devices
-   ================================== */
+#navigation ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem auto;
+}
 
-   @media (max-width: 768px) {
+#navigation li {
+
+    padding: 0.6rem 2.5rem;
+}
+
+#navigation a {
+    color: var(--primary-color);
+    font-style: italic;
+    text-decoration: none;
+    /* border-bottom: 0.1rem solid; */
+}
+
+#navigation li:hover a {
+    color: var(--secondary-color);
+    text-shadow: none;
+    border-bottom: 0.3rem double;
+}
+
+/* =================
+    media queries
+==================== */
+
+   @media (max-width: 1024px) {
 
     body {
-        font-size: 1em;
+        font-size: 1rem;
+    }
+
+    .feature {
+        display: block;
+        margin: 3rem 2rem;
+    }
+
+    img {
+        margin: 1rem 0;
+    }
+
+    #about,
+    #experience,
+    #skills {
+        margin: 1rem 0;
+        padding: 1rem;
+        border: 0.5rem solid var(--secondary-color);
+    }
+
+    #experience ul,
+    #skills ul {
+        margin-bottom: 2rem;
+    }
+    #experience li{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .job-details {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    .place,
+    .dates {
+        align-self: flex-start;
+    }
+
+    .title {
+        align-self: flex-end;
+    }
+
+    #skills ul {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    #projects,
+    #connect {
+        width: auto;
+        margin: 1rem auto;
     }
 
     #navigation ul {
+        flex-direction: column;
         padding: 0;
-        margin: 1em 0;
+        margin: 1rem 0;
 
     }
     #navigation ul li {
-        padding: 0.5em 1em;
-        margin-bottom: 0.5em;
+        padding: 0;
+        margin: 0;
         width: 100%; 
         text-align: center; 
     }
 
     #navigation ul li a {
-        font-size: 1em; 
+        font-size: 1rem; 
     }
 
-    #about,
-    #experience,
-    #skills,
-    #projects,
-    #connect {
-        margin: 2em 1em;
-    }
 
     h1 {
-        font-size: 2em;
+        font-size: 2rem;
     }
 
     h2 {
-        font-size: 1.5em;
-        padding: 0.2em;
+        font-size: 1.5rem;
+        padding: 0.2rem;
     }
 
     p {
-        margin: 1em;
-        padding: 1em;
+        margin: 0.5rem;
+        padding: 0.5rem;
     }
 
     footer {
-        margin: 2em 1em ;  
-    }
-}
-
-/* ==================================
-    media queries for tablets
-   ================================== */
-
-@media (max-width: 1024px) {
-    body {
-        font-size: 1em;
-    }
-
-    #navigation ul li {
-        padding: 0.5em 1em;
-        margin-bottom: 0.5em;
-        width: 100%;
-        text-align: center;
-    }
-
-    #about,
-    #experience,
-    #skills,
-    #projects,
-    #connect {
-        margin: 5em 3em;
-    }
-
-    h1 {
-        font-size: 2.5em;
-    }
-
-    h2 {
-        font-size: 1.5em;
+        margin: 2rem 1rem ;  
     }
 }

@@ -6,10 +6,12 @@
         <meta name="author" content="Alina Dalantaeva">
         <title>Alina's Page</title>
         <link href="./css/index.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     </head>
     <body>
-
         <header>
             <nav id="navigation">
                 <ul>
@@ -21,69 +23,69 @@
                 </ul>
             </nav>
         </header>
-
         <main>
             <h1>Alina Dalantaeva</h1>
+            <div class="feature">
+                <img src="./img/profile.jpg" alt="my picture" width="225" height="350" id="main-image">
 
-            <img src="./img/Alina.jpg" alt="picture" width="225" height="270" id="profile-picture">
+                <section id="about">
+                    <h2>About</h2>
+                    <p>Hello! I’m Alina. Originally from Russia, I moved to New York two years ago, where I’m currently diving into the world of IT. 
+                        I hold a bachelor’s degree in Regional Studies, specializing in Chinese and Korean languages.</p>
+                    <p>However, a few years ago, my interest shifted towards technology, leading me to learn Python.
+                        This newfound passion drew me deeper into the IT field, and now I’m fully committed to studying programming and expanding my technical skills. </p>
+                    <p>I’m also actively involved in environmental advocacy, focusing on issues related to ecology and climate change.</p>
+                </section>
+            </div>      
+            <div class="feature">
+                <section id="experience">
+                    <h2>Experience</h2>
+                    <ul>
+                        <li>
+                            <div class="job-details">
+                                <span class="place">Code the Dream (Durham, NC)</span>
+                                <span class="dates">2024 - present</span>
+                            </div>
+                            <div class="title">Student</div>
+                        </li>
+                        <li>
+                            <div class="job-details">
+                                <span class="place">CPC Megapir (Moscow, Russia)</span>
+                                <span class="dates">2021 - 2022</span>
+                            </div>
+                            <div class="title">Manager</div>
+                        </li>
+                        <li>
+                            <div class="job-details">
+                                <span class="place">Logistic Group (Moscow, Russia)</span>
+                                <span class="dates">2020 - 2021</span>
+                            </div>
+                            <div class="title">Manager</div>
+                        </li>
+                    </ul>
+                </section>
+                <img src="./img/experience.jpg" alt="image with laptop" width="225" height="350" id="experience-image">
+            </div>
+            <div class="feature">
+                <section id="skills">
+                    <h2>Skills</h2>
+                    <ul></ul>
+                </section>
+                <img src="./img/skills.jpg" alt="brain image" width="225" height="350" id="skills-image">
+            </div>
+                <section id="projects">
+                    <h2>Projects</h2>
+                </section>
 
-            <section id="about">
-                <h2>About</h2>
-                <p>Hello! I'm Alina. I'm currently diving into the world of IT and learning English.
-                    During my university years in Russia, I studied Chinese and Korean.</p>
-                <p>When I'm not immersed in tech, I love cooking, practicing yoga, hiking, 
-                    and exploring topics related to ecology and climate change.</p>
-            </section>
-
-            <section id="experience">
-                <h2>Experience</h2>
-                <ul>
-                    <li>
-                        <div class="job-details">
-                            <span class="place">Code the Dream (Durham, NC)</span>
-                            <span class="dates">2024 - present</span>
-                        </div>
-                        <div class="title">Student</div>
-                    </li>
-                    <li>
-                        <div class="job-details">
-                            <span class="place">CPC Megapir (Moscow, Russia)</span>
-                            <span class="dates">2021 - 2022</span>
-                        </div>
-                        <div class="title">Manager</div>
-                    </li>
-                    <li>
-                        <div class="job-details">
-                            <span class="place">Logistic Group (Moscow, Russia)</span>
-                            <span class="dates">2020 - 2021</span>
-                        </div>
-                        <div class="title">Manager</div>
-                    </li>
-                </ul>
-            </section>
-
-            <section id="skills">
-                <h2>Skills</h2>
-            </section>
-
-            <section id="projects">
-                <h2>Projects</h2>
-            </section>
-
-            <section id="connect">
-                <h2>Connect</h2>
-                <ul>
-                    <li><a href="https://github.com/Alina5884" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a></li>
-                    <li><a href="https://linkedin.com/in/alina-dalantaeva-423519310" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a></li>
-                    <li><a href="https://www.instagram.com/alina.3q/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></li>
-                </ul>
-            </section>
-
+                <section id="connect">
+                    <h2>Connect</h2>
+                    <ul>
+                        <li><a href="https://github.com/Alina5884" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a></li>
+                        <li><a href="https://linkedin.com/in/alina-dalantaeva-423519310" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a href="https://www.instagram.com/alina.3q/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></li>
+                    </ul>
+                </section>
         </main>
-
-        <footer>
-            <p>&copy; 2024 Alina's Page. All rights reserved.</p>
-        </footer>
-
-</body>
+        <script src="./js/index.js" defer></script>
+    </body>
 </html>
