@@ -13,7 +13,7 @@ const thisYear = today.getFullYear();
 const footer = document.createElement('footer');
 body.appendChild(footer);
 const copyright = document.createElement('p');
-copyright.innerHTML = "&copy; Alina Dalantaeva " + thisYear;
+copyright.innerHTML = "&copy; " + thisYear + " Alina Dalantaeva";
 footer.appendChild(copyright);
 
 const messageForm = document.forms['leave_message'];
@@ -39,6 +39,7 @@ messageForm.addEventListener('submit', function(event) {
     const removeButton = document.createElement('button');
     removeButton.innerHTML = "Remove";
     removeButton.type = "button";
+    removeButton.classList.add('remove-button');
     removeButton.addEventListener('click', function() {
         const entry = removeButton.parentNode;
         entry.remove();
@@ -84,3 +85,46 @@ messageForm.addEventListener('submit', function(event) {
 
     messageForm.reset();
 });
+
+const closeNavButton = document.querySelector('.close-nav');
+const openNavButton = document.querySelector('.open-nav');
+const navigation = document.querySelector('.navigation');
+
+closeNavButton.addEventListener("click", () => {
+    navigation.classList.remove('navigation-open');
+});
+
+openNavButton.addEventListener("click", () => {
+    navigation.classList.add('navigation-open')
+});
+
+const navLinks = document.querySelectorAll('.navigation a');
+
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        navigation.classList.remove('navigation-open');
+    });
+});
+
+
+const projectSection = document.getElementById('projects');
+const projectList = projectSection.querySelector('ul');
+
+fetch('https://api.github.com/users/Alina5884/repos')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(response.status);
+    }
+        return response.json();
+    })
+    .then(repositories => {
+        for (let i = 0; i < repositories.length; i++) {
+            const project = document.createElement('li');
+            project.innerHTML = repositories[i].name;
+            projectList.appendChild(project);
+        }
+    })
+    .catch(error => {
+        console.error('There was a problem: ', error);
+    })
+

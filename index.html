@@ -13,7 +13,10 @@
     </head>
     <body>
         <header>
-            <nav id="navigation">
+            <button aria-label="Open navigation" class="open-nav">&#9776;</button>
+
+            <nav class="navigation">
+                <button aria-label="Close navigation" class="close-nav">&times;</button>
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#experience">Experience</a></li>
@@ -25,6 +28,7 @@
         </header>
         <main>
             <h1>Alina Dalantaeva</h1>
+
             <div class="feature">
                 <img src="./img/profile.jpg" alt="my picture" width="225" height="350" id="main-image">
 
@@ -37,7 +41,9 @@
                     <p>I’m also actively involved in environmental advocacy, focusing on issues related to ecology and climate change.</p>
                 </section>
             </div>      
+
             <div class="feature">
+                <img src="./img/experience.jpg" alt="image with laptop" width="225" height="350" id="experience-image">
                 <section id="experience">
                     <h2>Experience</h2>
                     <ul>
@@ -64,49 +70,52 @@
                         </li>
                     </ul>
                 </section>
-                <img src="./img/experience.jpg" alt="image with laptop" width="225" height="350" id="experience-image">
             </div>
+
             <div class="feature">
+                <img src="./img/skills.jpg" alt="brain image" width="225" height="350" id="skills-image">
                 <section id="skills">
                     <h2>Skills</h2>
                     <ul></ul>
                 </section>
-                <img src="./img/skills.jpg" alt="brain image" width="225" height="350" id="skills-image">
             </div>
+            <div class="feature">
                 <section id="projects">
                     <h2>Projects</h2>
+                    <ul></ul>
                 </section>
+            </div>
 
-                <section id="connect">
-                    <h2>Connect</h2>
-                    <ul>
-                        <li><a href="https://github.com/Alina5884" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a></li>
-                        <li><a href="https://linkedin.com/in/alina-dalantaeva-423519310" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a></li>
-                        <li><a href="https://www.instagram.com/alina.3q/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></li>
-                    </ul>
-                </section>
+            <section id="connect">
+                <h2>Connect</h2>
+                <ul>
+                    <li><a href="https://github.com/Alina5884" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="https://linkedin.com/in/alina-dalantaeva-423519310" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://www.instagram.com/alina.3q/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </section>
+
+            <section id="leave-a-message-form">
+                <h2>Leave a Message</h2>
+                <form class="users-form" name="leave_message">
+                    <label class="name-label" for="usersName">Name:</label>
+                    <input id="usersName" type="text" name="usersName" required>
+
+                    <label class="email-label" for="usersEmail">Email:</label>
+                    <input id="usersEmail" type="email" name="usersEmail" required>
+
+                    <label class="message-label" for="usersMessage">Message:</label>
+                    <textarea id="usersMessage" name="usersMessage" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+
+            <section id="messages">
+                <h2>Messages</h2>
+                <ul></ul>
+            </section>
         </main>
-        <script src="./js/index.js" defer></script>
-        <section id="leave-a-message-form">
-            <h2>Leave a Message</h2>
-            <form class="users-form" name="leave_message">
-                <label class="name-label" for="usersName">Name:</label>
-                <input id="usersName" type="text" name="usersName" required>
-
-                <label class="email-label" for="usersEmail">Email:</label>
-                <input id="usersEmail" type="email" name="usersEmail" required>
-
-                <label class="message-label" for="usersMessage">Message:</label>
-                <textarea id="usersMessage" name="usersMessage" required></textarea>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-        <section id="messages">
-            <h2>Messages</h2>
-            <ul>
-
-            </ul>
-        </section>
         <footer></footer>
+        <script src="./js/index.js" defer></script>
     </body>
 </html>
