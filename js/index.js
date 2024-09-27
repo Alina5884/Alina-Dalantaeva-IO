@@ -1,4 +1,4 @@
-const skills = ['JavaScript','HTML', 'CSS', 'Python', 'MySQL', 'GitHub'];
+const skills = ['JavaScript','HTML', 'CSS', 'Python', 'SQL', 'GitHub'];
 const skillsSection = document.getElementById('skills');
 const skillsList = skillsSection.querySelector('ul');
 for (let i = 0; i < skills.length; i++) {

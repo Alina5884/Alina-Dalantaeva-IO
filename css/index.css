@@ -1,7 +1,11 @@
+/* =============================
+   Global Styles
+============================= */
 * {
     box-sizing: border-box;
 }
 
+/* Define theme colors */
 :root {
     --bg-color: #DCE0D9;
     --primary-color: #6B0F1A;
@@ -9,6 +13,9 @@
     --accent-color: #808F85;
 }
 
+/* =============================
+   Body and Main Content
+============================= */
 body {
     margin: 0;
     background-color: var(--bg-color);
@@ -18,10 +25,6 @@ body {
     font-weight: 600;
     text-align: center;
 }
-
-/* =================
-    main content
-==================== */
 
 h1 {
     padding-top: 1.5rem;
@@ -56,6 +59,10 @@ img {
     align-self: center;
     justify-self: center;
 }
+
+/* =============================
+   Section Specific Styles
+============================= */
 
 #about,
 #experience,
@@ -169,7 +176,15 @@ img {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    
+}
+
+#projects ul li{
+    margin: 0.75rem auto;
+}
+#projects-image {
+    grid-column: 2 / 3;
+    box-shadow: 0.4rem 0.4rem 0 var(--accent-color);
+    transform: rotate(5deg);
 }
 
 
@@ -192,14 +207,14 @@ img {
 }
 
 
-/* footer */
+/* Footer */
 
 footer {
     margin: 10rem auto 3rem;
 }
 
 /* =================
-    icons
+    Icons
 ==================== */
 
 a {
@@ -225,9 +240,9 @@ a:focus {
     border-radius: 20%;
 }
 
-/* ==============
-    form
-================= */
+/* =============================
+   Form and Messages
+============================= */
 
 #leave-a-message-form {
     display: grid;
@@ -299,10 +314,6 @@ button:hover {
     background-color: var(--secondary-color);
 }
 
-/* ==============
-    messages
-================= */
-
 #messages {
     display: none;
     padding: 1rem;
@@ -345,9 +356,9 @@ button:hover {
     padding: 0.8em 2rem;
 }
 
-/* ==============
-    navigation
-================= */
+/* =============================
+   Navigation
+============================= */
 
 .navigation {
     background-color: var(--bg-color);
@@ -373,7 +384,6 @@ button:hover {
     color: var(--primary-color);
     font-style: italic;
     text-decoration: none;
-    /* border-bottom: 0.1rem solid; */
 }
 
 .navigation li:hover a {
@@ -389,7 +399,7 @@ button:hover {
 
 
 /* =================
-    media queries
+    Media Queries
 ==================== */
 
    @media (max-width: 1024px) {
@@ -503,10 +513,10 @@ button:hover {
     .navigation {
         position: fixed;
         width: 100%;
-        top: 0;
+        top: 0%;
         right: 0;
         left: 100%;
-        height: 100%;
+        height: 40%;
         z-index: 1000;
         transform: translateX(0);
         transition: transform 300ms;
@@ -517,22 +527,18 @@ button:hover {
     }
 
     .navigation ul {
-        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
         list-style: none;
-        height: 80%;
+        height: 60%;
+        margin: 0 auto;
         padding: 0;
-        margin: 0;
     }
+
     .navigation ul li {
-        padding: 1rem;
+        padding: 0.1rem;
     }
-/* 
-    .navigation ul li a {
-        font-size: 1rem; 
-    } */
 
     .close-nav,
     .open-nav {
@@ -542,11 +548,7 @@ button:hover {
         font-weight: 700;
         font-size: 2rem;
         margin: 0;
-        margin-left: auto;
-        /* padding: .5em;
-        position: absolute;
-        margin: 0 auto;
-        */
+        margin-left: auto;   
     }
 
     .close-nav:hover,
